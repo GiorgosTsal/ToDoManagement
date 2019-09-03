@@ -1,4 +1,4 @@
-package webapp.login;
+package webapp.todo;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -31,32 +31,14 @@ import webapp.todo.TodoService;
 //3. doGet(HttpServletRequest request, HttpServletResponse response)
 //4. How is the response created?
 
-@WebServlet(urlPatterns = "/login.do")
-public class LoginServlet extends HttpServlet {
+@WebServlet(urlPatterns = "/list-todo.do")
+public class ListTodoServlet extends HttpServlet {
 	
-	private LoginService userValidationService = new LoginService();
 	private TodoService todoService = new TodoService();
 	
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		request.getRequestDispatcher("/WEB-INF/views/login.jsp").forward(request, response);
+		request.setAttribute("todos", todoService.retrieveTodos());
+		request.getRequestDispatcher("/WEB-INF/views/todo.jsp").forward(request, response);
 	}
-	@Override
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
-		String name = request.getParameter("name");
-		String password = request.getParameter("password");
-		
-		boolean isUserValid = userValidationService.isUserValid(name, password);
-		if(isUserValid) {
-			request.getSession().setAttribute("name", name);
-			response.sendRedirect("/list-todo.do");
-		}else {
-			request.setAttribute("errorMessage", "Invalid Credentials");
-			request.getRequestDispatcher("/WEB-INF/views/login.jsp").forward(request, response);
-		}
-
-
-	}
-
 }

@@ -25,11 +25,11 @@
 
 		<ul class="nav navbar-nav">
 			<li class="active"><a href="#">Home</a></li>
-			<li><a href="/todo.do">Todos</a></li>
+			<li><a href="/list-todo.do">Todos</a></li>
 		</ul>
 
 		<ul class="nav navbar-nav navbar-right">
-			<li><a href="/login.do">Login</a></li>
+			<li><a href="/logout.do">Logout</a></li>
 		</ul>
 
 	</nav>
@@ -45,7 +45,7 @@
 		<p>
 		 <font color="red">${errorMessage}</font>
 		</p>
-		<form action="/todo.do" method="post"> 
+		<form action="/add-todo.do" method="post"> 
 			New Todo: <input type="text" name="todo"> <input type="submit" value="Add">
 		</form>
 	</div>
