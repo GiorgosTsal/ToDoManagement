@@ -1,7 +1,9 @@
 C:\Users\user\eclipse-workspace\first-web-application\src\main\java\webapp\login\LoginService.java
 C:\Users\user\eclipse-workspace\first-web-application\src\main\java\webapp\todo\DeleteTodoServlet.java
 C:\Users\user\eclipse-workspace\first-web-application\src\main\java\webapp\todo\Todo.java
+C:\Users\user\eclipse-workspace\first-web-application\src\main\java\webapp\filter\LoginRequiredFilter.java
 C:\Users\user\eclipse-workspace\first-web-application\src\main\java\webapp\login\LoginServlet.java
 C:\Users\user\eclipse-workspace\first-web-application\src\main\java\webapp\todo\TodoService.java
 C:\Users\user\eclipse-workspace\first-web-application\src\main\java\webapp\todo\ListTodoServlet.java
 C:\Users\user\eclipse-workspace\first-web-application\src\main\java\webapp\todo\AddTodoServlet.java
+C:\Users\user\eclipse-workspace\first-web-application\src\main\java\webapp\logout\LogoutServlet.java

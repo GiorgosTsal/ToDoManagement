@@ -1,12 +1,24 @@
 package webapp.todo;
 
 public class Todo {
-	public Todo(String name) {
+	public Todo(String name, String category) {
 		super();
 		this.name = name;
+		this.category = category;
 	}
 
 	private String name;
+	private String category;
+
+	
+	
+	public String getCategory() {
+		return category;
+	}
+
+	public void setCategory(String category) {
+		this.category = category;
+	}
 
 	public String getName() {
 		return name;
@@ -16,9 +28,11 @@ public class Todo {
 		this.name = name;
 	}
 
+	
+
 	@Override
 	public String toString() {
-		return "Todo [name=" + name + "]";
+		return String.format("Todo [name=%s, category=%s]", name, category);
 	}
 
 	@Override
